@@ -24,7 +24,13 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r .ai/io/nerdythings/requirements.txt
-      
+
+      - name: Export Environment Variables
+        run: |
+          echo "CHATGPT_KEY=${{ secrets.CHATGPT_KEY }}" >> $GITHUB_ENV
+          echo "CHATGPT_MODEL=${{ secrets.CHATGPT_MODEL }}" >> $GITHUB_ENV
+          echo "GITHUB_TOKEN=${{ secrets.API_KEY }}" >> $GITHUB_ENV
+
       - name: Run Reviewer Script
         env:
           GITHUB_HEAD_REF: ${{ github.head_ref }}
