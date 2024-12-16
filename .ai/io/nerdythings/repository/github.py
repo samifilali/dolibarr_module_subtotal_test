@@ -4,7 +4,7 @@
 # Modifié par Sami Filali, ATM Consulting - 16/12/2024
 
 import requests
-from repository import Repository, RepositoryError
+from repository.repository import Repository, RepositoryError
 
 
 class GitHub(Repository):

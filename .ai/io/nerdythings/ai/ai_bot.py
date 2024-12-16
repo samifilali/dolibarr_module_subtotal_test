@@ -4,7 +4,7 @@
 # Modifié par Sami Filali, ATM Consulting - 16/12/2024
 
 from abc import ABC, abstractmethod
-from line_comment import LineComment
+from ai.line_comment import LineComment
 
 
 class AiBot(ABC):
