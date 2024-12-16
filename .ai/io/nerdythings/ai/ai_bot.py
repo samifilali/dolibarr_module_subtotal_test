@@ -17,16 +17,6 @@ Si aucun problème n'est détecté, répondez "{no_response}".
 
 Conventions Dolibarr à respecter :
 - Nom des variables et fonctions : camelCase, privilégier l'anglais, utiliser des verbes pour les fonctions
-- Nom des classes et interfaces : PascalCase
-- Gestion SQL : 
-  $sql = ...
-  $resql = $db->query($sql);
-  $obj = $db->fetch_object($resql)
-- Traductions : NomDuModuleShortCode_[...]
-- Configurations : NOMDUMODULESHORTCODE_MAJUSCULE
-- foreach : ne pas laisser "$key=>$value", nommer chaque variable
-- Constantes : MAJUSCULES_SÉPARÉES_PAR_UN_TIRET_BAS
-- Déclaration des types pour les paramètres et les retours de chaque fonction
 
 DIFFS:
 
