@@ -129,6 +129,14 @@ class Subtotal extends DolibarrApi
 
 	}
 
+
+    function calculate_price_for_total($parameters, &$object, &$action, $hookmanager)
+	{
+	    $basePRICE = getDolGlobalInt('Base_price');
+		return $object->total * $basePRICE
+	}
+
+
 	/**
 	 * @param DoliDB $db
 	 * @param $idline
