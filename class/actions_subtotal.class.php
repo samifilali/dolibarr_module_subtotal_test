@@ -73,6 +73,15 @@ class ActionsSubtotal extends \subtotal\RetroCompatCommonHookActions
 	}
 
 
+	function calculate_price_for_total($parameters, &$object, &$action, $hookmanager)
+	{
+	    $basePRICE = getDolGlobalInt('Base_price');
+		return $object->total * $basePRICE
+	}
+
+
+
+
 	function editDictionaryFieldlist($parameters, &$object, &$action, $hookmanager)
 	{
 		global $conf;
