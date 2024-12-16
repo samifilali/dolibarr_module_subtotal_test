@@ -4,6 +4,8 @@
 # Modifié par Sami Filali, ATM Consulting - 16/12/2024
 
 import os
+from time import sleep
+
 from git import Git
 from pathlib import Path
 from ai.chat_gpt import ChatGPT
@@ -102,6 +104,7 @@ def post_general_comment(github: GitHub, file: str, text: str) -> bool:
     Log.print_green("Publication d'un commentaire général", file, text)
     try:
         message = f"{file}\n{text}"
+        sleep(10)
         git_response = github.post_comment_general(message)
         Log.print_yellow("Commentaire général publié", git_response)
         return True
